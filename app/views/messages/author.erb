@@ -1,0 +1,20 @@
+<% @messages.each do |message| %>
+
+  <div class="message" style ="border: 2px solid black;" >
+
+    <h3><a href ="/messages/<%= message.id%>"</a> <small>(by: <%= message.author %>)</small></h3>
+
+    <p>
+
+      <%= message.content %>
+
+    </p>
+    <%if message.url %>
+    <a href = "<%=message.url%>">
+      <%=message.author%>'s link
+    </a>
+    <%end%>
+
+  </div>
+
+<% end %>
