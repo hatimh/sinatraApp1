@@ -8,5 +8,14 @@
   <%= @message.content  %>
 </p>
 
+<p>
+  created at: <%= @message.created_at %>
+</p>
+<%if @message.url %>
+  <a href = "<%= @message.url%>">
+    <%= @message.author%>'s link
+  </a>
+<%end%>
 <hr/>
+<a href="/messages/authors/<%= @message.author%>">Other posts from this author</a>
 <a href="/messages">Back to All Messages</a>
