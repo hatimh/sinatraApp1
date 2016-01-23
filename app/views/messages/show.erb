@@ -1,4 +1,4 @@
-<h1><%= @message.title %></h1>
+<h1>Message</h1>
 
 <p>
   Author: <%= @message.author %>
@@ -9,4 +9,6 @@
 </p>
 
 <hr/>
+<a href="/messages/authors/<%= @message.author%>">View other messages by the author</a>
 <a href="/messages">Back to All Messages</a>
+

@@ -19,16 +19,16 @@ get '/messages/:id' do
 end
 
 get '/messages/authors/:author' do
-  @message = Message.where(:author params[:author])
+  @messages = Message.where(author: params[:author])
   erb :'messages/author'
 end
 
 
 post '/messages' do
   @message = Message.new(
-    title: params[:title],
     content: params[:content],
-    author:  params[:author]
+    author:  params[:author],
+    url:  params[:url]
   )
   if @message.save
     redirect '/messages'
