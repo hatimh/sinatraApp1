@@ -4,6 +4,6 @@ class AddMessages < ActiveRecord::Migration
       t.string :title
       t.string :author
       t.string :content
-    end  
+    end
   end
 end
